@@ -1,5 +1,5 @@
 import requests
-from pathlib import import Path
+from pathlib import Path
 
 url = "https://api.pushover.net/1/messages.json"
 userAddress = "u1u24KYp2tAbk33xxQQ4S78rndVGi6"
