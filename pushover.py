@@ -14,7 +14,8 @@ file = source_dir + "/pushover_api"
 keyfile = open(file, "r")
 key = keyfile.read()
 keyfile.close
-
+#remove newline from the API key, probably from ansible-vault
+key = key.strip()
 
 def run(title,message,priority):
     postObjs = {
@@ -27,7 +28,7 @@ def run(title,message,priority):
     }
     
     
-    print("key is",key)
+    #print("key is",key)
     r = requests.post(url,data = postObjs)
     #print(r.text)
     
