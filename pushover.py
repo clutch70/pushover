@@ -2,8 +2,10 @@ import sys
 import requests
 from pathlib import Path
 
+# Ex pushover.py "Title" "Message" "priorityInt" "useraddress"
+
 url = "https://api.pushover.net/1/messages.json"
-userAddress = "u1u24KYp2tAbk33xxQQ4S78rndVGi6"
+
 
 #Get an API key from pushover.net and create 
 #the file pushover_api below with nothing else in it
@@ -39,4 +41,5 @@ if __name__ == "__main__":
     message = sys.argv[2]
     title = sys.argv[1]
     priority = sys.argv[3]
+    userAddress = sys.argv[4]
     run(title,message,priority)
